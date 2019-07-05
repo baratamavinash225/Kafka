@@ -8,3 +8,11 @@ docker-compose up -d --build
 
 Ensure all the services are up and running
 
+docker-compose ps
+docker container ls
+
+
+To go to the docker container via bash
+
+Ex: docker container exec -it broker /bin/bash
+
