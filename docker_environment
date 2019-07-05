@@ -1,0 +1,10 @@
+git clone https://github.com/confluentinc/cp-docker-images
+cd cp-docker-images
+git checkout 5.2.2-post
+
+cd examples/cp-all-in-one/
+
+docker-compose up -d --build
+
+Ensure all the services are up and running
+
