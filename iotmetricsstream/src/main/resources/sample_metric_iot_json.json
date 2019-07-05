@@ -1,0 +1,15 @@
+{
+  "metricName": "cpu_usage",
+  "metricVal": "80.5",
+  "assetName": "raspb1",
+  "assetType": "RASPBERRY_PI",
+  "environment": "DEVELOPMENT",
+  "tags": [
+    {
+      "key1": "val1"
+    },
+    {
+      "key2": "val2"
+    }
+  ]
+}

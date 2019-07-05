@@ -1,0 +1,14 @@
+curl -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" \
+      -H "Accept: application/vnd.kafka.v2+json" \
+      --data '{"value_schema": "{\"type\": \"record\", \"name\": \"User\", \"fields\": [{\"name\": \"name\", \"type\": \"string\"}]}", "records": [{"value": {"name": "{\"metricName\":\"cpu_usage\", \"metricVal\":\"80.5\", \"assetName\":\"raspb1\",\"assetType\":\"RASPBERRY_PI\", \"environment\":\"QA\", \"tags\":[{\"key1\":\"val1\"},{\"key2\":\"val2\"}]}"}}]}' \
+      "http://localhost:8082/topics/cpu_usage_metric"
+
+curl -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" \
+      -H "Accept: application/vnd.kafka.v2+json" \
+      --data '{"value_schema": "{\"type\": \"record\", \"name\": \"User\", \"fields\": [{\"name\": \"name\", \"type\": \"string\"}]}", "records": [{"value": {"name": "{\"metricName\":\"cpu_usage\", \"metricVal\":\"80.5\", \"assetName\":\"odroid4\",\"assetType\":\"ODroid XU4\", \"environment\":\"QA\", \"tags\":[{\"key1\":\"val1\"},{\"key2\":\"val2\"}]}"}}]}' \
+      "http://localhost:8082/topics/cpu_usage_metric"
+	  
+curl -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" \
+      -H "Accept: application/vnd.kafka.v2+json" \
+      --data '{"value_schema": "{\"type\": \"record\", \"name\": \"User\", \"fields\": [{\"name\": \"name\", \"type\": \"string\"}]}", "records": [{"value": {"name": "{\"metricName\":\"cpu_usage\", \"metricVal\":\"80.5\", \"assetName\":\"LattePanda\",\"assetType\":\"LattePanda Alpha 864\", \"environment\":\"PROD\", \"tags\":[{\"key1\":\"val1\"},{\"key2\":\"val2\"}]}"}}]}' \
+      "http://localhost:8082/topics/cpu_usage_metric"
